@@ -6,7 +6,8 @@ public class PartA {
     public static void main(String[] args) throws Exception {
         // read test file and add each line to testCases arrayList
         String curDirectory = System.getProperty("user.dir");
-        File testFile = new File(curDirectory, "TestCases.txt");
+        File tmpFile = new File(curDirectory);
+        File testFile = new File(tmpFile.getParent(), "TestCases.txt");
         Scanner txtScanner = new Scanner(testFile);
         ArrayList<String> testCases = new ArrayList<String>();
         while (txtScanner.hasNextLine()) {
